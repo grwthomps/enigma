@@ -4,8 +4,4 @@ class RandomGenerator
     rand(100000).to_s.rjust(5, "0")
   end
 
-  def self.create_date
-
-  end
-
 end

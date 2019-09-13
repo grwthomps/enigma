@@ -8,9 +8,5 @@ class RandomGeneratorTest < Minitest::Test
     # # want to stub 5 digit number
     assert_equal 5, RandomGenerator.create_key.length
   end
-
-  def test_creating_random_date
-    skip
-  end
-
+  
 end
