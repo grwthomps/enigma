@@ -45,10 +45,6 @@ class EnigmaTest < Minitest::Test
     skip
   end
 
-  def test_decrypt_with_random_key
-    skip
-  end
-
 end
 
 # pry(main)> enigma.encrypt("hello world", "02715", "040895")
