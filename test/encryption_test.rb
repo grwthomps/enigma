@@ -14,4 +14,8 @@ class EncryptionTest < Minitest::Test
     assert_equal "keder ohulw", Encryption.shift_letters_helper(alpha_arr, orig_message_arr, [3, 27, 73, 20])
   end
 
+  def test_encrypt
+    assert_equal "keder ohulw", Encryption.encrypt("hello world", "02715", "040895")
+  end
+
 end
