@@ -1,6 +1,6 @@
-require './lib/encryption'
+require './lib/random_generator'
 
-class Enigma < Encryption
+class Enigma < RandomGenerator
 
   def encrypt(enc_message, key = RandomGenerator.create_key, date = DateGenerator.create_date)
     {
@@ -16,6 +16,7 @@ class Enigma < Encryption
       key: key,
       date: date
     }
+    require 'pry'; binding.pry
   end
 
 end
