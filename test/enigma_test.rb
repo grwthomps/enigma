@@ -32,11 +32,23 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encrypt_with_only_key_given
-    skip
+    expected = {
+                  encryption: "njhauesdxq ",
+                  key: "02715",
+                  date: "150919"
+                }
+    assert_equal expected, @enigma.encrypt("hello world", "02715")
   end
 
   def test_decrypt_with_only_key_given
-    skip
+    expected = {
+                  decryption: "hello world",
+                  key: "02715",
+                  date: "150919"
+                }
+    encrypted = @enigma.encrypt("hello world", "02715")
+
+    assert_equal expected, @enigma.decrypt(encrypted[:encryption], "02715")
   end
 
   def test_encrypt_with_random_key
