@@ -12,7 +12,6 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encrypt_with_all_params_given
-
     expected = {
                   encryption: "keder ohulw",
                   key: "02715",
@@ -23,7 +22,6 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_decrypt_with_all_params_given
-    
     expected = {
                   decryption: "hello world",
                   key: "02715",
