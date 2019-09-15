@@ -11,7 +11,13 @@ class Enigma < Encryption
   end
 
   def decrypt(dec_message, key, date = DateGenerator.create_date)
-
+    {
+      decryption: Decryption.decrypt(dec_message, key, date),
+      key: key,
+      date: date
+    }
   end
 
 end
+
+# why is encryption inheritance required but not decryption?
