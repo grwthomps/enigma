@@ -31,6 +31,7 @@ class Decryption
     key_arr = key.split('')
     date_last_four = ((date.to_i * date.to_i).to_s)[-4..-1]
     shift_nums_arr = shift_nums_helper(key_arr, date_last_four)
+    shift_letters_helper(alpha_arr, message_arr, shift_nums_arr)
   end
 
 end

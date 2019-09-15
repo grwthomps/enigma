@@ -15,7 +15,6 @@ class DecryptionTest < Minitest::Test
   end
 
   def test_decrypt
-    skip
     assert_equal "hello world", Decryption.decrypt("keder ohulw", "02715", "040895")
   end
 
