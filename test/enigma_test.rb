@@ -12,7 +12,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encrypt_with_all_params_given
-    skip
+    
     expected = {
                   encryption: "keder ohulw",
                   key: "02715",
