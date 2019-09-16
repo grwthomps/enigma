@@ -8,12 +8,14 @@ incoming_text = handle.read
 
 handle.close
 
-encrypted_message = (enigma.encrypt(incoming_text))[:encryption]
+encryption_hash = enigma.encrypt(incoming_text)
+
+# encrypted_message = encryption_hash[:encryption]
 
 writer = File.open(ARGV[1], "w")
 
-writer.write(encrypted_message)
+writer.write(encryption_hash[:encryption])
 
 writer.close
 
-puts "Created '#{ARGV[1]}' with the key #{(enigma.encrypt(incoming_text))[:key]} and date #{(enigma.encrypt(incoming_text))[:date]}"
+puts "Created '#{ARGV[1]}' with the key #{encryption_hash[:key]} and date #{encryption_hash[:date]}"
