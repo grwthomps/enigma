@@ -1,6 +1,4 @@
-require './lib/decryption'
-
-class Encryption < Decryption
+class Encryption
 
   def self.shift_nums_helper(key_arr, date_last_four)
     shift_nums_arr = []

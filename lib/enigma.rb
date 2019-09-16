@@ -1,6 +1,9 @@
+require './lib/date_generator'
 require './lib/random_generator'
+require './lib/encryption'
+require './lib/decryption'
 
-class Enigma < RandomGenerator
+class Enigma
 
   def encrypt(enc_message, key = RandomGenerator.create_key, date = DateGenerator.create_date)
     {

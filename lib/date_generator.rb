@@ -1,6 +1,4 @@
-require './lib/encryption'
-
-class DateGenerator < Encryption
+class DateGenerator
 
   def self.create_date
     Time.now.strftime('%d%m%y')
