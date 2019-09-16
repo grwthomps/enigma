@@ -33,6 +33,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encrypt_with_only_key_given
+    DateGenerator.stubs(:create_date).returns "150919"
     expected = {
                   encryption: "njhauesdxq ",
                   key: "02715",
@@ -42,6 +43,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_decrypt_with_only_key_given
+    DateGenerator.stubs(:create_date).returns "150919"
     expected = {
                   decryption: "hello world",
                   key: "02715",
