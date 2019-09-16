@@ -10,8 +10,6 @@ handle.close
 
 encryption_hash = enigma.encrypt(incoming_text)
 
-# encrypted_message = encryption_hash[:encryption]
-
 writer = File.open(ARGV[1], "w")
 
 writer.write(encryption_hash[:encryption])
