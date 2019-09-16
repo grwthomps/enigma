@@ -1,5 +1,6 @@
 require './test/test_helper'
 require './lib/enigma'
+require 'mocha/minitest'
 
 class EnigmaTest < Minitest::Test
 
