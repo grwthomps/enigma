@@ -16,9 +16,6 @@ class Enigma < RandomGenerator
       key: key,
       date: date
     }
-    require 'pry'; binding.pry
   end
 
 end
-
-# why is encryption inheritance required but not decryption?
