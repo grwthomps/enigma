@@ -20,6 +20,7 @@ class Decryption
         shift_nums_arr.rotate!
       else
         dec_message << character
+        shift_nums_arr.rotate!
       end
     end
     dec_message.join

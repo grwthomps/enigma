@@ -20,6 +20,7 @@ class Encryption
         shift_nums_arr.rotate!
       else
         enc_message << character
+        shift_nums_arr.rotate!
       end
     end
     enc_message.join
@@ -27,7 +28,7 @@ class Encryption
 
   def self.encrypt(message_input, key, date)
     alpha_arr = ("a".."z").to_a << " "
-    orig_message_arr = message_input.split('')
+    orig_message_arr = message_input.downcase.split('')
     key_arr = key.split('')
     date_last_four = ((date.to_i * date.to_i).to_s)[-4..-1]
     shift_nums_arr = shift_nums_helper(key_arr, date_last_four)
