@@ -22,6 +22,16 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 
+  def test_encrypt_with_punctuation_and_all_params_given
+    expected = {
+                  encryption: "wo!gptv wkyghkz ,f otxlgxy",
+                  key: "38287",
+                  date: "170919"
+                }
+
+    assert_equal expected, @enigma.encrypt("Hi! Another test, there is", "38287", "170919")
+  end
+
   def test_decrypt_with_all_params_given
     expected = {
                   decryption: "hello world",
@@ -30,6 +40,16 @@ class EnigmaTest < Minitest::Test
                 }
 
     assert_equal expected, @enigma.decrypt("keder ohulw", "02715", "040895")
+  end
+
+  def test_decrypt_from_another_person_with_all_params_given
+    DateGenerator.stubs(:create_date).returns "170919"
+    expected = {
+                decryption: "yarp! narp...?",
+                key: "43595",
+                date: "170919"
+                }
+    assert_equal expected, @enigma.decrypt("rnbd!mypkb...?", "43595", "170919")
   end
 
   def test_encrypt_with_only_key_given
