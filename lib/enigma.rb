@@ -2,6 +2,7 @@ require './lib/date_generator'
 require './lib/random_generator'
 require './lib/encryption'
 require './lib/decryption'
+require './lib/crack'
 
 class Enigma
 
