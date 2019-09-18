@@ -21,4 +21,8 @@ class Enigma
     }
   end
 
+  def crack(enc_message, date = DateGenerator.create_date)
+    Crack.decrypt(enc_message, date)
+  end
+
 end
